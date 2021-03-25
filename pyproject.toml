@@ -1,0 +1,48 @@
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=0.12.3"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "codehash"
+version = "0.0.0"
+description = "Hashing Python code"
+authors = ["Jan Hermann <dev@jan.hermann.name>"]
+readme = "README.md"
+packages = [
+    { include = "codehash", from = "src" }
+]
+repository = "https://github.com/jhrmnn/codehash"
+documentation = "https://jhrmnn.github.io/codehash"
+license = "MPL-2.0"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+typing_extensions = "^3.6"
+
+[tool.poetry.dev-dependencies]
+mypy = ">=0.800"
+lxml = "^4.2"
+flake8 = "^3.5"
+flake8-bugbear = ">=19"
+flake8-comprehensions = ">=3"
+flake8-quotes = ">=3"
+black = ">=20-beta.0"
+pydocstyle = ">=5"
+pep8-naming = ">=0.7"
+isort = ">=5"
+pytest = "^6"
+coverage = "^5"
+sphinx = "^2.2"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+dirty = true
+
+[tool.black]
+target-version = ["py37"]
+skip-string-normalization = true

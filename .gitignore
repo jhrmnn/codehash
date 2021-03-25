@@ -1,0 +1,10 @@
+*.pyc
+/src/*.egg-info/
+/.mypy_cache/
+/.pytest_cache/
+/.coverage
+/htmlcov/
+/report/
+/dist/
+/poetry.lock
+/doc/build/
